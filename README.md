@@ -68,6 +68,35 @@ python src/activity_selection.py
 python src/preprocess.py
 ```
 
+### Using the Processed Data (for model training)
+**Train / validation / test** are split **by participant** (see `splits.json`: `train_participants`, `val_participants`, `test_participants`, `seed=42`):
+
+| Split | Participants | Purpose |
+|---|---|---|
+| `train` | 36 (~70%) | Fit models (and the scalers). |
+| `val` | 8 (~15%) | Tune hyperparameters, early stopping, model selection. |
+| `test` | 7 (~15%) | Final, one-time evaluation on unseen users. Do **not** tune on it. |
+
+Every `.npz` already contains the split arrays, so there is no need to re-split. Keys: `X_{train,val,test}`, `y_{train,val,test}`, `subj_{train,val,test}` (participant ID per window).
+
+**Labels:** `0`=K drinking, `1`=A walking, `2`=M kicking, `3`=P dribbling, `4`=H soup (also in `preprocessing_summary.json`).
+
+| Use | File | `X` shape | Notes |
+|---|---|---|---|
+| Random Forest / SVM / MLP | `data/processed/ml/features_{1,2,5,10}s.npz` | `(N, 94)` | `X_*` is Z-scored with train stats; `X_*_unscaled` is the raw version (trees don't need scaling). Also has `feature_names`, `scaler_mean`, `scaler_std`. |
+| LSTM / GRU | `data/processed/dl/sequences_{1,2,5,10}s.npz` | `(N, T, 6)` | Z-scored per channel with train stats. `T` = 20, 40, 100, 200. Channels: `ax, ay, az, gx, gy, gz`. |
+| Custom preprocessing | `data/processed/raw_windows/windows_{1,2,5,10}s.npz` | `(N, T, 6)` | Unnormalized. |
+
+```python
+import numpy as np
+d = np.load("data/processed/ml/features_5s.npz")
+X_train, y_train = d["X_train"], d["y_train"]
+X_val, y_val = d["X_val"], d["y_val"]
+X_test, y_test = d["X_test"], d["y_test"]
+groups = d["subj_train"]  # use with GroupKFold for cross-validation
+```
+> **Important:** windows are non-overlapping and class-balanced per split. If you cross-validate, use `GroupKFold` on `subj_*` so a participant never appears in both folds. All models must use the same `splits.json` split so results are comparable.
+
 ### Models
 * **Traditional Machine Learning Baselines:** Random Forest, Support Vector Machine (SVM), and Multi-Layer Perceptron (MLP).
 * **Deep Learning Time-Series Models:** Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) networks.
@@ -86,7 +115,7 @@ python src/preprocess.py
 │   │   ├── accel/           # Smartphone accelerometer, one file per subject
 │   │   ├── gyro/            # Smartphone gyroscope, one file per subject
 │   │   └── activity_key.txt # Activity letter codes (A–S)
-│   └── processed/           # Windowed features and normalized sequences (gitignored)
+│   └── processed/           # Windowed features and normalized sequences (committed)
 │       ├── selected_activities.json
 │       ├── preprocessing_summary.json
 │       ├── raw_windows/     # Unnormalized 6-channel windows: windows_{1,2,5,10}s.npz
