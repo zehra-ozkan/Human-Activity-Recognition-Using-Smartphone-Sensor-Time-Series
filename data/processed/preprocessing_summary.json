@@ -1,0 +1,515 @@
+{
+  "sampling_rate_hz": 20,
+  "channels": [
+    "ax",
+    "ay",
+    "az",
+    "gx",
+    "gy",
+    "gz"
+  ],
+  "window_durations_sec": [
+    1,
+    2,
+    5,
+    10
+  ],
+  "window_overlap": 0.0,
+  "max_gap_sec": 0.5,
+  "code_to_label": {
+    "K": 0,
+    "A": 1,
+    "M": 2,
+    "P": 3,
+    "H": 4
+  },
+  "label_to_code": {
+    "0": "K",
+    "1": "A",
+    "2": "M",
+    "3": "P",
+    "4": "H"
+  },
+  "label_to_activity": {
+    "0": "drinking",
+    "1": "walking",
+    "2": "kicking",
+    "3": "dribbling",
+    "4": "soup"
+  },
+  "num_statistical_features": 94,
+  "statistical_feature_names": [
+    "ax_mean",
+    "ax_std",
+    "ax_min",
+    "ax_max",
+    "ax_median",
+    "ax_iqr",
+    "ax_rms",
+    "ax_mad",
+    "ax_zcr",
+    "ax_spec_energy",
+    "ax_dom_freq_mag",
+    "ay_mean",
+    "ay_std",
+    "ay_min",
+    "ay_max",
+    "ay_median",
+    "ay_iqr",
+    "ay_rms",
+    "ay_mad",
+    "ay_zcr",
+    "ay_spec_energy",
+    "ay_dom_freq_mag",
+    "az_mean",
+    "az_std",
+    "az_min",
+    "az_max",
+    "az_median",
+    "az_iqr",
+    "az_rms",
+    "az_mad",
+    "az_zcr",
+    "az_spec_energy",
+    "az_dom_freq_mag",
+    "gx_mean",
+    "gx_std",
+    "gx_min",
+    "gx_max",
+    "gx_median",
+    "gx_iqr",
+    "gx_rms",
+    "gx_mad",
+    "gx_zcr",
+    "gx_spec_energy",
+    "gx_dom_freq_mag",
+    "gy_mean",
+    "gy_std",
+    "gy_min",
+    "gy_max",
+    "gy_median",
+    "gy_iqr",
+    "gy_rms",
+    "gy_mad",
+    "gy_zcr",
+    "gy_spec_energy",
+    "gy_dom_freq_mag",
+    "gz_mean",
+    "gz_std",
+    "gz_min",
+    "gz_max",
+    "gz_median",
+    "gz_iqr",
+    "gz_rms",
+    "gz_mad",
+    "gz_zcr",
+    "gz_spec_energy",
+    "gz_dom_freq_mag",
+    "accel_mag_mean",
+    "accel_mag_std",
+    "accel_mag_min",
+    "accel_mag_max",
+    "accel_mag_median",
+    "accel_mag_iqr",
+    "accel_mag_rms",
+    "accel_mag_mad",
+    "accel_mag_zcr",
+    "accel_mag_spec_energy",
+    "accel_mag_dom_freq_mag",
+    "gyro_mag_mean",
+    "gyro_mag_std",
+    "gyro_mag_min",
+    "gyro_mag_max",
+    "gyro_mag_median",
+    "gyro_mag_iqr",
+    "gyro_mag_rms",
+    "gyro_mag_mad",
+    "gyro_mag_zcr",
+    "gyro_mag_spec_energy",
+    "gyro_mag_dom_freq_mag",
+    "accel_corr_xy",
+    "accel_corr_xz",
+    "accel_corr_yz",
+    "gyro_corr_xy",
+    "gyro_corr_xz",
+    "gyro_corr_yz"
+  ],
+  "cleaning_stats": {
+    "accel_kept_rows": 1387259,
+    "gyro_kept_rows": 1013678,
+    "accel_malformed_rows": 0,
+    "gyro_malformed_rows": 0,
+    "accel_out_of_order": 5,
+    "gyro_out_of_order": 5,
+    "accel_duplicate_timestamps": 23230,
+    "gyro_duplicate_timestamps": 17854,
+    "aligned_20hz_samples": 916901,
+    "aligned_contiguous_bouts": 255
+  },
+  "participant_split": {
+    "seed": 42,
+    "split_strategy": "participant_disjoint",
+    "sampling_rate_hz": 20,
+    "total_participants": 51,
+    "counts": {
+      "train": 36,
+      "val": 8,
+      "test": 7
+    },
+    "train_participants": [
+      1603,
+      1604,
+      1605,
+      1607,
+      1609,
+      1610,
+      1615,
+      1616,
+      1617,
+      1618,
+      1620,
+      1621,
+      1623,
+      1624,
+      1625,
+      1626,
+      1627,
+      1628,
+      1629,
+      1630,
+      1631,
+      1632,
+      1634,
+      1637,
+      1638,
+      1639,
+      1640,
+      1641,
+      1642,
+      1643,
+      1644,
+      1645,
+      1646,
+      1647,
+      1648,
+      1650
+    ],
+    "val_participants": [
+      1600,
+      1606,
+      1611,
+      1612,
+      1614,
+      1619,
+      1622,
+      1635
+    ],
+    "test_participants": [
+      1601,
+      1602,
+      1608,
+      1613,
+      1633,
+      1636,
+      1649
+    ]
+  },
+  "windows": {
+    "1s": {
+      "window_sec": 1,
+      "num_features": 94,
+      "dl_path": "data\\processed\\dl\\sequences_1s.npz",
+      "ml_npz_path": "data\\processed\\ml\\features_1s.npz",
+      "ml_csv_path": "data\\processed\\ml\\features_1s.csv",
+      "sequence_shape_train": [
+        32229,
+        20,
+        6
+      ],
+      "sequence_shape_val": [
+        7163,
+        20,
+        6
+      ],
+      "sequence_shape_test": [
+        6273,
+        20,
+        6
+      ],
+      "feature_shape_train": [
+        32229,
+        94
+      ],
+      "feature_shape_val": [
+        7163,
+        94
+      ],
+      "feature_shape_test": [
+        6273,
+        94
+      ],
+      "raw_windows_path": "data\\processed\\raw_windows\\windows_1s.npz",
+      "window_samples": 20,
+      "counts": {
+        "train": 32229,
+        "val": 7163,
+        "test": 6273,
+        "total": 45665
+      },
+      "class_distribution": {
+        "K_drinking": {
+          "train": 6446,
+          "val": 1433,
+          "test": 1254,
+          "total": 9133
+        },
+        "A_walking": {
+          "train": 6446,
+          "val": 1432,
+          "test": 1255,
+          "total": 9133
+        },
+        "M_kicking": {
+          "train": 6445,
+          "val": 1432,
+          "test": 1253,
+          "total": 9130
+        },
+        "P_dribbling": {
+          "train": 6446,
+          "val": 1433,
+          "test": 1256,
+          "total": 9135
+        },
+        "H_soup": {
+          "train": 6446,
+          "val": 1433,
+          "test": 1255,
+          "total": 9134
+        }
+      }
+    },
+    "2s": {
+      "window_sec": 2,
+      "num_features": 94,
+      "dl_path": "data\\processed\\dl\\sequences_2s.npz",
+      "ml_npz_path": "data\\processed\\ml\\features_2s.npz",
+      "ml_csv_path": "data\\processed\\ml\\features_2s.csv",
+      "sequence_shape_train": [
+        16029,
+        40,
+        6
+      ],
+      "sequence_shape_val": [
+        3563,
+        40,
+        6
+      ],
+      "sequence_shape_test": [
+        3123,
+        40,
+        6
+      ],
+      "feature_shape_train": [
+        16029,
+        94
+      ],
+      "feature_shape_val": [
+        3563,
+        94
+      ],
+      "feature_shape_test": [
+        3123,
+        94
+      ],
+      "raw_windows_path": "data\\processed\\raw_windows\\windows_2s.npz",
+      "window_samples": 40,
+      "counts": {
+        "train": 16029,
+        "val": 3563,
+        "test": 3123,
+        "total": 22715
+      },
+      "class_distribution": {
+        "K_drinking": {
+          "train": 3206,
+          "val": 713,
+          "test": 624,
+          "total": 4543
+        },
+        "A_walking": {
+          "train": 3206,
+          "val": 712,
+          "test": 625,
+          "total": 4543
+        },
+        "M_kicking": {
+          "train": 3205,
+          "val": 712,
+          "test": 623,
+          "total": 4540
+        },
+        "P_dribbling": {
+          "train": 3206,
+          "val": 713,
+          "test": 626,
+          "total": 4545
+        },
+        "H_soup": {
+          "train": 3206,
+          "val": 713,
+          "test": 625,
+          "total": 4544
+        }
+      }
+    },
+    "5s": {
+      "window_sec": 5,
+      "num_features": 94,
+      "dl_path": "data\\processed\\dl\\sequences_5s.npz",
+      "ml_npz_path": "data\\processed\\ml\\features_5s.npz",
+      "ml_csv_path": "data\\processed\\ml\\features_5s.csv",
+      "sequence_shape_train": [
+        6309,
+        100,
+        6
+      ],
+      "sequence_shape_val": [
+        1403,
+        100,
+        6
+      ],
+      "sequence_shape_test": [
+        1233,
+        100,
+        6
+      ],
+      "feature_shape_train": [
+        6309,
+        94
+      ],
+      "feature_shape_val": [
+        1403,
+        94
+      ],
+      "feature_shape_test": [
+        1233,
+        94
+      ],
+      "raw_windows_path": "data\\processed\\raw_windows\\windows_5s.npz",
+      "window_samples": 100,
+      "counts": {
+        "train": 6309,
+        "val": 1403,
+        "test": 1233,
+        "total": 8945
+      },
+      "class_distribution": {
+        "K_drinking": {
+          "train": 1262,
+          "val": 281,
+          "test": 246,
+          "total": 1789
+        },
+        "A_walking": {
+          "train": 1262,
+          "val": 280,
+          "test": 247,
+          "total": 1789
+        },
+        "M_kicking": {
+          "train": 1261,
+          "val": 280,
+          "test": 245,
+          "total": 1786
+        },
+        "P_dribbling": {
+          "train": 1262,
+          "val": 281,
+          "test": 248,
+          "total": 1791
+        },
+        "H_soup": {
+          "train": 1262,
+          "val": 281,
+          "test": 247,
+          "total": 1790
+        }
+      }
+    },
+    "10s": {
+      "window_sec": 10,
+      "num_features": 94,
+      "dl_path": "data\\processed\\dl\\sequences_10s.npz",
+      "ml_npz_path": "data\\processed\\ml\\features_10s.npz",
+      "ml_csv_path": "data\\processed\\ml\\features_10s.csv",
+      "sequence_shape_train": [
+        3069,
+        200,
+        6
+      ],
+      "sequence_shape_val": [
+        683,
+        200,
+        6
+      ],
+      "sequence_shape_test": [
+        603,
+        200,
+        6
+      ],
+      "feature_shape_train": [
+        3069,
+        94
+      ],
+      "feature_shape_val": [
+        683,
+        94
+      ],
+      "feature_shape_test": [
+        603,
+        94
+      ],
+      "raw_windows_path": "data\\processed\\raw_windows\\windows_10s.npz",
+      "window_samples": 200,
+      "counts": {
+        "train": 3069,
+        "val": 683,
+        "test": 603,
+        "total": 4355
+      },
+      "class_distribution": {
+        "K_drinking": {
+          "train": 614,
+          "val": 137,
+          "test": 120,
+          "total": 871
+        },
+        "A_walking": {
+          "train": 614,
+          "val": 136,
+          "test": 121,
+          "total": 871
+        },
+        "M_kicking": {
+          "train": 613,
+          "val": 136,
+          "test": 119,
+          "total": 868
+        },
+        "P_dribbling": {
+          "train": 614,
+          "val": 137,
+          "test": 122,
+          "total": 873
+        },
+        "H_soup": {
+          "train": 614,
+          "val": 137,
+          "test": 121,
+          "total": 872
+        }
+      }
+    }
+  }
+}

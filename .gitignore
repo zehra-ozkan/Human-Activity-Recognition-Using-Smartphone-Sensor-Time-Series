@@ -1,5 +1,5 @@
 # Generated data (recreate with src/preprocess.py)
-data/processed/
+# (data/processed/ is intentionally tracked)
 
 # Original full download (only phone accel/gyro is kept in data/raw/)
 wisdm-dataset/

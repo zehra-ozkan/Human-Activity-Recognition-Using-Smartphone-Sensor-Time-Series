@@ -1,0 +1,275 @@
+{
+  "top_k": 5,
+  "ranked_by": "total",
+  "selected_codes": [
+    "K",
+    "A",
+    "M",
+    "P",
+    "H"
+  ],
+  "selected_activities": {
+    "K": "drinking",
+    "A": "walking",
+    "M": "kicking",
+    "P": "dribbling",
+    "H": "soup"
+  },
+  "selected_details": [
+    {
+      "code": "K",
+      "activity": "drinking",
+      "accel_samples": 285190,
+      "gyro_samples": 202395,
+      "total_samples": 487585,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 1,
+      "selected": true
+    },
+    {
+      "code": "A",
+      "activity": "walking",
+      "accel_samples": 279817,
+      "gyro_samples": 203919,
+      "total_samples": 483736,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 2,
+      "selected": true
+    },
+    {
+      "code": "M",
+      "activity": "kicking",
+      "accel_samples": 278766,
+      "gyro_samples": 202625,
+      "total_samples": 481391,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 3,
+      "selected": true
+    },
+    {
+      "code": "P",
+      "activity": "dribbling",
+      "accel_samples": 272730,
+      "gyro_samples": 202331,
+      "total_samples": 475061,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 4,
+      "selected": true
+    },
+    {
+      "code": "H",
+      "activity": "soup",
+      "accel_samples": 270756,
+      "gyro_samples": 202408,
+      "total_samples": 473164,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 5,
+      "selected": true
+    }
+  ],
+  "all_activities_ranked": [
+    {
+      "code": "K",
+      "activity": "drinking",
+      "accel_samples": 285190,
+      "gyro_samples": 202395,
+      "total_samples": 487585,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 1,
+      "selected": true
+    },
+    {
+      "code": "A",
+      "activity": "walking",
+      "accel_samples": 279817,
+      "gyro_samples": 203919,
+      "total_samples": 483736,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 2,
+      "selected": true
+    },
+    {
+      "code": "M",
+      "activity": "kicking",
+      "accel_samples": 278766,
+      "gyro_samples": 202625,
+      "total_samples": 481391,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 3,
+      "selected": true
+    },
+    {
+      "code": "P",
+      "activity": "dribbling",
+      "accel_samples": 272730,
+      "gyro_samples": 202331,
+      "total_samples": 475061,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 4,
+      "selected": true
+    },
+    {
+      "code": "H",
+      "activity": "soup",
+      "accel_samples": 270756,
+      "gyro_samples": 202408,
+      "total_samples": 473164,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 5,
+      "selected": true
+    },
+    {
+      "code": "G",
+      "activity": "teeth",
+      "accel_samples": 269609,
+      "gyro_samples": 202622,
+      "total_samples": 472231,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 6,
+      "selected": false
+    },
+    {
+      "code": "E",
+      "activity": "standing",
+      "accel_samples": 269604,
+      "gyro_samples": 202351,
+      "total_samples": 471955,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 7,
+      "selected": false
+    },
+    {
+      "code": "O",
+      "activity": "catch",
+      "accel_samples": 272219,
+      "gyro_samples": 198756,
+      "total_samples": 470975,
+      "accel_participants": 50,
+      "gyro_participants": 50,
+      "rank": 8,
+      "selected": false
+    },
+    {
+      "code": "R",
+      "activity": "clapping",
+      "accel_samples": 268065,
+      "gyro_samples": 202330,
+      "total_samples": 470395,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 9,
+      "selected": false
+    },
+    {
+      "code": "B",
+      "activity": "jogging",
+      "accel_samples": 268409,
+      "gyro_samples": 200252,
+      "total_samples": 468661,
+      "accel_participants": 49,
+      "gyro_participants": 49,
+      "rank": 10,
+      "selected": false
+    },
+    {
+      "code": "S",
+      "activity": "folding",
+      "accel_samples": 265214,
+      "gyro_samples": 202321,
+      "total_samples": 467535,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 11,
+      "selected": false
+    },
+    {
+      "code": "D",
+      "activity": "sitting",
+      "accel_samples": 264592,
+      "gyro_samples": 202370,
+      "total_samples": 466962,
+      "accel_participants": 51,
+      "gyro_participants": 51,
+      "rank": 12,
+      "selected": false
+    },
+    {
+      "code": "L",
+      "activity": "sandwich",
+      "accel_samples": 265781,
+      "gyro_samples": 197915,
+      "total_samples": 463696,
+      "accel_participants": 51,
+      "gyro_participants": 50,
+      "rank": 13,
+      "selected": false
+    },
+    {
+      "code": "I",
+      "activity": "chips",
+      "accel_samples": 261360,
+      "gyro_samples": 197905,
+      "total_samples": 459265,
+      "accel_participants": 50,
+      "gyro_participants": 50,
+      "rank": 14,
+      "selected": false
+    },
+    {
+      "code": "Q",
+      "activity": "writing",
+      "accel_samples": 260497,
+      "gyro_samples": 197894,
+      "total_samples": 458391,
+      "accel_participants": 51,
+      "gyro_participants": 50,
+      "rank": 15,
+      "selected": false
+    },
+    {
+      "code": "C",
+      "activity": "stairs",
+      "accel_samples": 255645,
+      "gyro_samples": 197857,
+      "total_samples": 453502,
+      "accel_participants": 50,
+      "gyro_participants": 50,
+      "rank": 16,
+      "selected": false
+    },
+    {
+      "code": "J",
+      "activity": "pasta",
+      "accel_samples": 249793,
+      "gyro_samples": 197844,
+      "total_samples": 447637,
+      "accel_participants": 50,
+      "gyro_participants": 50,
+      "rank": 17,
+      "selected": false
+    },
+    {
+      "code": "F",
+      "activity": "typing",
+      "accel_samples": 246356,
+      "gyro_samples": 194540,
+      "total_samples": 440896,
+      "accel_participants": 49,
+      "gyro_participants": 49,
+      "rank": 18,
+      "selected": false
+    }
+  ]
+}
