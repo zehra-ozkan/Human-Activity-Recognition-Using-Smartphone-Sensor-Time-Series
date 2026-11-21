@@ -10,7 +10,7 @@ We use the **[WISDM Smartphone and Smartwatch Activity and Biometrics Dataset](h
 * **Dataset Page:** [UCI Machine Learning Repository – WISDM Dataset](https://archive.ics.uci.edu/dataset/507/wisdm+smartphone+and+smartwatch+activity+and+biometrics+dataset)
 * **Dataset Documentation:** [WISDM-dataset-description.pdf](https://archive.ics.uci.edu/ml/machine-learning-databases/00507/WISDM-dataset-description.pdf)
 
-> **Note:** Raw sensor files are excluded from version control via `.gitignore`. Download the archive from the UCI link above and place the smartphone accelerometer files in `data/raw/` before running the pipeline.
+> **Note:** Raw sensor files are excluded from version control via `.gitignore`. Download the archive from the UCI link above and copy the smartphone files from `wisdm-dataset/raw/phone/accel/` into `data/raw/accel/` and from `wisdm-dataset/raw/phone/gyro/` into `data/raw/gyro/` (plus `activity_key.txt` into `data/raw/`) before running the pipeline.
 
 ## Methodology
 
@@ -35,6 +35,9 @@ We use the **[WISDM Smartphone and Smartwatch Activity and Biometrics Dataset](h
 .
 ├── data/
 │   ├── raw/                 # Raw WISDM dataset files (gitignored)
+│   │   ├── accel/           # Smartphone accelerometer, one file per subject
+│   │   ├── gyro/            # Smartphone gyroscope, one file per subject
+│   │   └── activity_key.txt # Activity letter codes (A–S)
 │   └── processed/           # Windowed features and normalized sequences (gitignored)
 ├── notebooks/               # Exploratory data analysis (EDA) and visualization
 ├── src/
