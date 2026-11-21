@@ -13,11 +13,32 @@ We use the **[WISDM Smartphone and Smartwatch Activity and Biometrics Dataset](h
 > **Note:** The smartphone accelerometer and gyroscope raw files (~456 MB) are included in the repository under `data/raw/`, so no separate download is needed. Generated files in `data/processed/` are gitignored and created by `src/preprocess.py`.
 
 ## Setup
-```bash
-git clone <repo-url>
+Requires **Python 3.12**.
+
+### Windows (PowerShell)
+```powershell
+git clone https://github.com/zehra-ozkan/Human-Activity-Recognition-Using-Smartphone-Sensor-Time-Series.git
 cd Human-Activity-Recognition-Using-Smartphone-Sensor-Time-Series
-python -m venv .venv
-.venv\Scripts\activate        # Windows  (macOS/Linux: source .venv/bin/activate)
+
+# Create and activate a Python 3.12 virtual environment
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# Upgrade pip and install dependencies
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+*(If PowerShell blocks `Activate.ps1`, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` first, or use Command Prompt: `.venv\Scripts\activate.bat`.)*
+
+### macOS / Linux
+```bash
+git clone https://github.com/zehra-ozkan/Human-Activity-Recognition-Using-Smartphone-Sensor-Time-Series.git
+cd Human-Activity-Recognition-Using-Smartphone-Sensor-Time-Series
+
+python3.12 -m venv .venv
+source .venv/bin/activate
+
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
