@@ -1,0 +1,12 @@
+# Generated data (recreate with src/preprocess.py)
+# (data/processed/ is intentionally tracked)
+
+# Original full download (only phone accel/gyro is kept in data/raw/)
+wisdm-dataset/
+
+# OS / Python / Jupyter junk
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
