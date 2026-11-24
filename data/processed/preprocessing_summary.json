@@ -15,6 +15,7 @@
     10
   ],
   "window_overlap": 0.0,
+  "window_stride_sec": 1.0,
   "max_gap_sec": 0.5,
   "code_to_label": {
     "K": 0,
@@ -218,9 +219,9 @@
     "1s": {
       "window_sec": 1,
       "num_features": 94,
-      "dl_path": "data\\processed\\dl\\sequences_1s.npz",
-      "ml_npz_path": "data\\processed\\ml\\features_1s.npz",
-      "ml_csv_path": "data\\processed\\ml\\features_1s.csv",
+      "dl_path": "data/processed/dl/sequences_1s.npz",
+      "ml_npz_path": "data/processed/ml/features_1s.npz",
+      "ml_csv_path": "data/processed/ml/features_1s.csv",
       "sequence_shape_train": [
         32229,
         20,
@@ -248,7 +249,7 @@
         6273,
         94
       ],
-      "raw_windows_path": "data\\processed\\raw_windows\\windows_1s.npz",
+      "raw_windows_path": "data/processed/raw_windows/windows_1s.npz",
       "window_samples": 20,
       "counts": {
         "train": 32229,
@@ -292,222 +293,222 @@
     "2s": {
       "window_sec": 2,
       "num_features": 94,
-      "dl_path": "data\\processed\\dl\\sequences_2s.npz",
-      "ml_npz_path": "data\\processed\\ml\\features_2s.npz",
-      "ml_csv_path": "data\\processed\\ml\\features_2s.csv",
+      "dl_path": "data/processed/dl/sequences_2s.npz",
+      "ml_npz_path": "data/processed/ml/features_2s.npz",
+      "ml_csv_path": "data/processed/ml/features_2s.csv",
       "sequence_shape_train": [
-        16029,
+        32049,
         40,
         6
       ],
       "sequence_shape_val": [
-        3563,
+        7123,
         40,
         6
       ],
       "sequence_shape_test": [
-        3123,
+        6238,
         40,
         6
       ],
       "feature_shape_train": [
-        16029,
+        32049,
         94
       ],
       "feature_shape_val": [
-        3563,
+        7123,
         94
       ],
       "feature_shape_test": [
-        3123,
+        6238,
         94
       ],
-      "raw_windows_path": "data\\processed\\raw_windows\\windows_2s.npz",
+      "raw_windows_path": "data/processed/raw_windows/windows_2s.npz",
       "window_samples": 40,
       "counts": {
-        "train": 16029,
-        "val": 3563,
-        "test": 3123,
-        "total": 22715
+        "train": 32049,
+        "val": 7123,
+        "test": 6238,
+        "total": 45410
       },
       "class_distribution": {
         "K_drinking": {
-          "train": 3206,
-          "val": 713,
-          "test": 624,
-          "total": 4543
+          "train": 6410,
+          "val": 1425,
+          "test": 1247,
+          "total": 9082
         },
         "A_walking": {
-          "train": 3206,
-          "val": 712,
-          "test": 625,
-          "total": 4543
+          "train": 6410,
+          "val": 1424,
+          "test": 1248,
+          "total": 9082
         },
         "M_kicking": {
-          "train": 3205,
-          "val": 712,
-          "test": 623,
-          "total": 4540
+          "train": 6409,
+          "val": 1424,
+          "test": 1246,
+          "total": 9079
         },
         "P_dribbling": {
-          "train": 3206,
-          "val": 713,
-          "test": 626,
-          "total": 4545
+          "train": 6410,
+          "val": 1425,
+          "test": 1249,
+          "total": 9084
         },
         "H_soup": {
-          "train": 3206,
-          "val": 713,
-          "test": 625,
-          "total": 4544
+          "train": 6410,
+          "val": 1425,
+          "test": 1248,
+          "total": 9083
         }
       }
     },
     "5s": {
       "window_sec": 5,
       "num_features": 94,
-      "dl_path": "data\\processed\\dl\\sequences_5s.npz",
-      "ml_npz_path": "data\\processed\\ml\\features_5s.npz",
-      "ml_csv_path": "data\\processed\\ml\\features_5s.csv",
+      "dl_path": "data/processed/dl/sequences_5s.npz",
+      "ml_npz_path": "data/processed/ml/features_5s.npz",
+      "ml_csv_path": "data/processed/ml/features_5s.csv",
       "sequence_shape_train": [
-        6309,
+        31509,
         100,
         6
       ],
       "sequence_shape_val": [
-        1403,
+        7003,
         100,
         6
       ],
       "sequence_shape_test": [
-        1233,
+        6133,
         100,
         6
       ],
       "feature_shape_train": [
-        6309,
+        31509,
         94
       ],
       "feature_shape_val": [
-        1403,
+        7003,
         94
       ],
       "feature_shape_test": [
-        1233,
+        6133,
         94
       ],
-      "raw_windows_path": "data\\processed\\raw_windows\\windows_5s.npz",
+      "raw_windows_path": "data/processed/raw_windows/windows_5s.npz",
       "window_samples": 100,
       "counts": {
-        "train": 6309,
-        "val": 1403,
-        "test": 1233,
-        "total": 8945
+        "train": 31509,
+        "val": 7003,
+        "test": 6133,
+        "total": 44645
       },
       "class_distribution": {
         "K_drinking": {
-          "train": 1262,
-          "val": 281,
-          "test": 246,
-          "total": 1789
+          "train": 6302,
+          "val": 1401,
+          "test": 1226,
+          "total": 8929
         },
         "A_walking": {
-          "train": 1262,
-          "val": 280,
-          "test": 247,
-          "total": 1789
+          "train": 6302,
+          "val": 1400,
+          "test": 1227,
+          "total": 8929
         },
         "M_kicking": {
-          "train": 1261,
-          "val": 280,
-          "test": 245,
-          "total": 1786
+          "train": 6301,
+          "val": 1400,
+          "test": 1225,
+          "total": 8926
         },
         "P_dribbling": {
-          "train": 1262,
-          "val": 281,
-          "test": 248,
-          "total": 1791
+          "train": 6302,
+          "val": 1401,
+          "test": 1228,
+          "total": 8931
         },
         "H_soup": {
-          "train": 1262,
-          "val": 281,
-          "test": 247,
-          "total": 1790
+          "train": 6302,
+          "val": 1401,
+          "test": 1227,
+          "total": 8930
         }
       }
     },
     "10s": {
       "window_sec": 10,
       "num_features": 94,
-      "dl_path": "data\\processed\\dl\\sequences_10s.npz",
-      "ml_npz_path": "data\\processed\\ml\\features_10s.npz",
-      "ml_csv_path": "data\\processed\\ml\\features_10s.csv",
+      "dl_path": "data/processed/dl/sequences_10s.npz",
+      "ml_npz_path": "data/processed/ml/features_10s.npz",
+      "ml_csv_path": "data/processed/ml/features_10s.csv",
       "sequence_shape_train": [
-        3069,
+        30609,
         200,
         6
       ],
       "sequence_shape_val": [
-        683,
+        6803,
         200,
         6
       ],
       "sequence_shape_test": [
-        603,
+        5958,
         200,
         6
       ],
       "feature_shape_train": [
-        3069,
+        30609,
         94
       ],
       "feature_shape_val": [
-        683,
+        6803,
         94
       ],
       "feature_shape_test": [
-        603,
+        5958,
         94
       ],
-      "raw_windows_path": "data\\processed\\raw_windows\\windows_10s.npz",
+      "raw_windows_path": "data/processed/raw_windows/windows_10s.npz",
       "window_samples": 200,
       "counts": {
-        "train": 3069,
-        "val": 683,
-        "test": 603,
-        "total": 4355
+        "train": 30609,
+        "val": 6803,
+        "test": 5958,
+        "total": 43370
       },
       "class_distribution": {
         "K_drinking": {
-          "train": 614,
-          "val": 137,
-          "test": 120,
-          "total": 871
+          "train": 6122,
+          "val": 1361,
+          "test": 1191,
+          "total": 8674
         },
         "A_walking": {
-          "train": 614,
-          "val": 136,
-          "test": 121,
-          "total": 871
+          "train": 6122,
+          "val": 1360,
+          "test": 1192,
+          "total": 8674
         },
         "M_kicking": {
-          "train": 613,
-          "val": 136,
-          "test": 119,
-          "total": 868
+          "train": 6121,
+          "val": 1360,
+          "test": 1190,
+          "total": 8671
         },
         "P_dribbling": {
-          "train": 614,
-          "val": 137,
-          "test": 122,
-          "total": 873
+          "train": 6122,
+          "val": 1361,
+          "test": 1193,
+          "total": 8676
         },
         "H_soup": {
-          "train": 614,
-          "val": 137,
-          "test": 121,
-          "total": 872
+          "train": 6122,
+          "val": 1361,
+          "test": 1192,
+          "total": 8675
         }
       }
     }

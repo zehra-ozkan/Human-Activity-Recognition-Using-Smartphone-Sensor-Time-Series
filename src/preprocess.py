@@ -270,10 +270,15 @@ def segment_into_windows(
     code_to_label: Dict[str, int],
     split_info: Dict,
     overlap: float = 0.0,
+    stride_sec: float | None = None,
 ) -> Dict[str, np.ndarray]:
     """Slice aligned 20 Hz segments into fixed-duration windows per participant split."""
     win_samples = int(window_sec * SAMPLING_RATE_HZ)
-    step_samples = max(1, int(round(win_samples * (1.0 - overlap))))
+    if stride_sec is not None and stride_sec > 0:
+        # Fixed stride for every window size -> similar number of windows per size
+        step_samples = max(1, int(round(stride_sec * SAMPLING_RATE_HZ)))
+    else:
+        step_samples = max(1, int(round(win_samples * (1.0 - overlap))))
 
     subj_to_split: Dict[int, str] = {}
     for s in split_info["train_participants"]:
@@ -317,6 +322,7 @@ def segment_into_windows(
 def run_preprocessing(
     windows: List[int],
     overlap: float = 0.0,
+    stride_sec: float | None = None,
     max_gap_sec: float = 0.5,
     seed: int = 42,
     train_ratio: float = 0.70,
@@ -443,6 +449,7 @@ def run_preprocessing(
             code_to_label=code_to_label,
             split_info=split_info,
             overlap=overlap,
+            stride_sec=stride_sec,
         )
 
         # Save unnormalized raw windows for reference / reproducibility
@@ -504,6 +511,7 @@ def run_preprocessing(
         "channels": list(CHANNEL_NAMES),
         "window_durations_sec": windows,
         "window_overlap": overlap,
+        "window_stride_sec": stride_sec,
         "max_gap_sec": max_gap_sec,
         "code_to_label": code_to_label,
         "label_to_code": {str(k): v for k, v in label_to_code.items()},
@@ -539,6 +547,12 @@ def main() -> None:
         help="Fractional overlap between consecutive windows in [0, 0.9] (default: 0.0 for non-overlapping)",
     )
     parser.add_argument(
+        "--stride-sec",
+        type=float,
+        default=1.0,
+        help="Fixed stride (seconds) between window starts for ALL window sizes; overrides --overlap. Use 0 to fall back to --overlap (default: 1.0)",
+    )
+    parser.add_argument(
         "--max-gap-sec",
         type=float,
         default=0.5,
@@ -567,6 +581,7 @@ def main() -> None:
     run_preprocessing(
         windows=args.windows,
         overlap=args.overlap,
+        stride_sec=args.stride_sec,
         max_gap_sec=args.max_gap_sec,
         seed=args.seed,
         train_ratio=args.train_ratio,
